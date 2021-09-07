@@ -4,7 +4,8 @@
 using namespace std;
 string basePairs(string base)
 {
-	for (int i = 0; i <= base.length(); i++)
+	int i = 0;
+	for (; i <= base.length(); i++)
 	{
 		if (base[i] == 'A')
 		{
@@ -24,11 +25,11 @@ string basePairs(string base)
 		}
 		else
 		{
-			return "Wrong input, please answer with these bases (A,C,G,T)";
 			break;
 		}
-		return base;
 	}
+	if (i == base.length()) return base;
+	else return "Wrong input, please answer with these bases (A,C,G,T)";
 }
 int main()
 {
