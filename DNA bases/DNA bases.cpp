@@ -2,10 +2,18 @@
 #include <iostream>
 #include <string>
 using namespace std;
+
+
 string basePairs(string base)
 {
-	int i = 0;
-	for (; i <= base.length(); i++)
+	for (int i = 0; i < base.length(); i++)
+	{
+		if (!(base[i] == 'A' || base[i] == 'T' || base[i] == 'C' || base[i] == 'G'))
+		{
+			return "Wrong input, please answer with these bases (A,C,G,T)";
+		}
+	}
+	for (int i = 0; i < base.length(); i++)
 	{
 		if (base[i] == 'A')
 		{
@@ -23,13 +31,8 @@ string basePairs(string base)
 		{
 			base[i] = 'C';
 		}
-		else
-		{
-			break;
-		}
 	}
-	if (i == base.length()) return base;
-	else return "Wrong input, please answer with these bases (A,C,G,T)";
+	return base;
 }
 int main()
 {
