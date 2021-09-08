@@ -36,18 +36,18 @@ string basePairs(string base)
 }
 int main()
 {
-	cout << "Welcome to MathFlare's early access DNA chain calculator" << endl;
+	cout << "Welcome to MathFlare's early access DNA string calculator" << endl;
 	cout << "--------------------------------------------------------" << endl;
 	while (true)
 	{
 		string base;
 		cout << "Please answer with these bases(A, C, G, T)" << endl;
 		cout << "------------------------------------------" << endl;
-		cout << "Enter the type of nucleotides(Their Bases) of the one DNA chain: ";
+		cout << "Enter the type of nucleotides(Their Bases) of the one DNA string: ";
 		cin >> base;
 		if (basePairs(base) != "Wrong input, please answer with these bases (A,C,G,T)")
 		{
-			cout << "The type of nucleotides of the other's DNA chain: " << basePairs(base) << endl << endl;
+			cout << "The type of nucleotides of the other's DNA string: " << basePairs(base) << endl << endl;
 			cout << "     " << base << endl;
 			cout << "DNA: ";
 			for (int i = 0; i <= base.length(); i++)
@@ -56,7 +56,9 @@ int main()
 				{
 					cout << endl;
 				}
-				else cout << "|";
+				else {
+					cout << "|";
+				}
 			}
 			cout << "     " << basePairs(base) << endl;
 			cout << "===============================================================================================" << endl;
